@@ -1,0 +1,848 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F20AC0B27F7480D0065031F /* KasirApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20AC0A27F7480D0065031F /* KasirApp.swift */; };
+		2F20AC0D27F7480D0065031F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20AC0C27F7480D0065031F /* ContentView.swift */; };
+		2F20AC0F27F7480E0065031F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F20AC0E27F7480E0065031F /* Assets.xcassets */; };
+		2F20AC1227F7480E0065031F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F20AC1127F7480E0065031F /* Preview Assets.xcassets */; };
+		2F20AC1C27F7480E0065031F /* KasirTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20AC1B27F7480E0065031F /* KasirTests.swift */; };
+		2F20AC2627F7480E0065031F /* KasirUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20AC2527F7480E0065031F /* KasirUITests.swift */; };
+		2F20AC2827F7480E0065031F /* KasirUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20AC2727F7480E0065031F /* KasirUITestsLaunchTests.swift */; };
+		2F3068F827F94B9400885F41 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3068F727F94B9400885F41 /* Item.swift */; };
+		2F3068FD27F94B9D00885F41 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3068F927F94B9D00885F41 /* InventoryView.swift */; };
+		2F3068FE27F94B9D00885F41 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3068FA27F94B9D00885F41 /* Codable.swift */; };
+		2F3068FF27F94B9D00885F41 /* CashierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3068FB27F94B9D00885F41 /* CashierView.swift */; };
+		2F30690027F94B9D00885F41 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3068FC27F94B9D00885F41 /* HistoryView.swift */; };
+		2F30690227F94BA700885F41 /* itemData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F30690127F94BA700885F41 /* itemData.json */; };
+		2F30690427F94BE300885F41 /* ItemDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30690327F94BE300885F41 /* ItemDBManager.swift */; };
+		2F30690A27F96C3F00885F41 /* TransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30690927F96C3F00885F41 /* TransactionItem.swift */; };
+		2F30690C27F96C8F00885F41 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30690B27F96C8F00885F41 /* Transaction.swift */; };
+		2F30690E27F96DF600885F41 /* TransactionDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30690D27F96DF600885F41 /* TransactionDBManager.swift */; };
+		2F30691027F96FBE00885F41 /* TransactionItemDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30690F27F96FBE00885F41 /* TransactionItemDBManager.swift */; };
+		2F30691427F97F9800885F41 /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30691327F97F9800885F41 /* Dropdown.swift */; };
+		2F8A69E127FAC45A00FE4293 /* PaymentMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A69E027FAC45A00FE4293 /* PaymentMethodView.swift */; };
+		2F8A69E427FAC52E00FE4293 /* CashlessPaymentChannelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A69E327FAC52E00FE4293 /* CashlessPaymentChannelList.swift */; };
+		2F8A69E627FAC55D00FE4293 /* CashlessPaymentChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A69E527FAC55D00FE4293 /* CashlessPaymentChannel.swift */; };
+		3C960ABF1592133C373DB87C /* Pods_KasirTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF3EA259579C8934E5BF3DF /* Pods_KasirTests.framework */; };
+		4864E47400E00D2FACFBB110 /* Pods_Kasir_KasirUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41239A211839C718ED2CFC35 /* Pods_Kasir_KasirUITests.framework */; };
+		C9517A5427879270D8D52ACD /* Pods_Kasir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC9C5BA11D385B05650975D /* Pods_Kasir.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F20AC1827F7480E0065031F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F20ABFF27F7480D0065031F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F20AC0627F7480D0065031F;
+			remoteInfo = Kasir;
+		};
+		2F20AC2227F7480E0065031F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F20ABFF27F7480D0065031F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F20AC0627F7480D0065031F;
+			remoteInfo = Kasir;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		20B01A39789A36F678AB5E4E /* Pods-Kasir-KasirUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kasir-KasirUITests.release.xcconfig"; path = "Target Support Files/Pods-Kasir-KasirUITests/Pods-Kasir-KasirUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2F20AC0727F7480D0065031F /* Kasir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kasir.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F20AC0A27F7480D0065031F /* KasirApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KasirApp.swift; sourceTree = "<group>"; };
+		2F20AC0C27F7480D0065031F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2F20AC0E27F7480E0065031F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F20AC1127F7480E0065031F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2F20AC1727F7480E0065031F /* KasirTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KasirTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F20AC1B27F7480E0065031F /* KasirTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KasirTests.swift; sourceTree = "<group>"; };
+		2F20AC2127F7480E0065031F /* KasirUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KasirUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F20AC2527F7480E0065031F /* KasirUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KasirUITests.swift; sourceTree = "<group>"; };
+		2F20AC2727F7480E0065031F /* KasirUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KasirUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2F3068F727F94B9400885F41 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		2F3068F927F94B9D00885F41 /* InventoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
+		2F3068FA27F94B9D00885F41 /* Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
+		2F3068FB27F94B9D00885F41 /* CashierView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashierView.swift; sourceTree = "<group>"; };
+		2F3068FC27F94B9D00885F41 /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		2F30690127F94BA700885F41 /* itemData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = itemData.json; sourceTree = "<group>"; };
+		2F30690327F94BE300885F41 /* ItemDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDBManager.swift; sourceTree = "<group>"; };
+		2F30690927F96C3F00885F41 /* TransactionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItem.swift; sourceTree = "<group>"; };
+		2F30690B27F96C8F00885F41 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		2F30690D27F96DF600885F41 /* TransactionDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDBManager.swift; sourceTree = "<group>"; };
+		2F30690F27F96FBE00885F41 /* TransactionItemDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemDBManager.swift; sourceTree = "<group>"; };
+		2F30691327F97F9800885F41 /* Dropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
+		2F8A69E027FAC45A00FE4293 /* PaymentMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodView.swift; sourceTree = "<group>"; };
+		2F8A69E327FAC52E00FE4293 /* CashlessPaymentChannelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashlessPaymentChannelList.swift; sourceTree = "<group>"; };
+		2F8A69E527FAC55D00FE4293 /* CashlessPaymentChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashlessPaymentChannel.swift; sourceTree = "<group>"; };
+		41239A211839C718ED2CFC35 /* Pods_Kasir_KasirUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kasir_KasirUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CF15A777F88294CA0970BE2 /* Pods-KasirTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KasirTests.debug.xcconfig"; path = "Target Support Files/Pods-KasirTests/Pods-KasirTests.debug.xcconfig"; sourceTree = "<group>"; };
+		95A7F21DFCE00E77CC8131E1 /* Pods-KasirTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KasirTests.release.xcconfig"; path = "Target Support Files/Pods-KasirTests/Pods-KasirTests.release.xcconfig"; sourceTree = "<group>"; };
+		9D18CF06A09A336EA70ACE92 /* Pods-Kasir-KasirUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kasir-KasirUITests.debug.xcconfig"; path = "Target Support Files/Pods-Kasir-KasirUITests/Pods-Kasir-KasirUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABF3EA259579C8934E5BF3DF /* Pods_KasirTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KasirTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAC9C5BA11D385B05650975D /* Pods_Kasir.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kasir.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBF98C8EF1F01990718BFA4A /* Pods-Kasir.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kasir.debug.xcconfig"; path = "Target Support Files/Pods-Kasir/Pods-Kasir.debug.xcconfig"; sourceTree = "<group>"; };
+		D8188612AAB2B218FB8E4BF9 /* Pods-Kasir.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kasir.release.xcconfig"; path = "Target Support Files/Pods-Kasir/Pods-Kasir.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F20AC0427F7480D0065031F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9517A5427879270D8D52ACD /* Pods_Kasir.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F20AC1427F7480E0065031F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C960ABF1592133C373DB87C /* Pods_KasirTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F20AC1E27F7480E0065031F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4864E47400E00D2FACFBB110 /* Pods_Kasir_KasirUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F20ABFE27F7480D0065031F = {
+			isa = PBXGroup;
+			children = (
+				2F20AC0927F7480D0065031F /* Kasir */,
+				2F20AC1A27F7480E0065031F /* KasirTests */,
+				2F20AC2427F7480E0065031F /* KasirUITests */,
+				2F20AC0827F7480D0065031F /* Products */,
+				84B5F57A7D119BB5E776E7CB /* Pods */,
+				7898A9BB6BE4C81AD3D2519D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2F20AC0827F7480D0065031F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F20AC0727F7480D0065031F /* Kasir.app */,
+				2F20AC1727F7480E0065031F /* KasirTests.xctest */,
+				2F20AC2127F7480E0065031F /* KasirUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F20AC0927F7480D0065031F /* Kasir */ = {
+			isa = PBXGroup;
+			children = (
+				2F8A69E227FAC50800FE4293 /* Utils */,
+				2F30691127F97F7A00885F41 /* Components */,
+				2F30690827F94CDC00885F41 /* Assets */,
+				2F30690727F94CB400885F41 /* Helpers */,
+				2F30690627F94CA600885F41 /* Model */,
+				2F30690527F94C9F00885F41 /* UI */,
+				2F20AC0E27F7480E0065031F /* Assets.xcassets */,
+				2F20AC1027F7480E0065031F /* Preview Content */,
+			);
+			path = Kasir;
+			sourceTree = "<group>";
+		};
+		2F20AC1027F7480E0065031F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2F20AC1127F7480E0065031F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2F20AC1A27F7480E0065031F /* KasirTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F20AC1B27F7480E0065031F /* KasirTests.swift */,
+			);
+			path = KasirTests;
+			sourceTree = "<group>";
+		};
+		2F20AC2427F7480E0065031F /* KasirUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2F20AC2527F7480E0065031F /* KasirUITests.swift */,
+				2F20AC2727F7480E0065031F /* KasirUITestsLaunchTests.swift */,
+			);
+			path = KasirUITests;
+			sourceTree = "<group>";
+		};
+		2F30690527F94C9F00885F41 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2F3068FB27F94B9D00885F41 /* CashierView.swift */,
+				2F8A69E027FAC45A00FE4293 /* PaymentMethodView.swift */,
+				2F20AC0C27F7480D0065031F /* ContentView.swift */,
+				2F3068F927F94B9D00885F41 /* InventoryView.swift */,
+				2F3068FC27F94B9D00885F41 /* HistoryView.swift */,
+				2F20AC0A27F7480D0065031F /* KasirApp.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2F30690627F94CA600885F41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F3068F727F94B9400885F41 /* Item.swift */,
+				2F30690927F96C3F00885F41 /* TransactionItem.swift */,
+				2F30690B27F96C8F00885F41 /* Transaction.swift */,
+				2F8A69E527FAC55D00FE4293 /* CashlessPaymentChannel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F30690727F94CB400885F41 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2F30690327F94BE300885F41 /* ItemDBManager.swift */,
+				2F3068FA27F94B9D00885F41 /* Codable.swift */,
+				2F30690D27F96DF600885F41 /* TransactionDBManager.swift */,
+				2F30690F27F96FBE00885F41 /* TransactionItemDBManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2F30690827F94CDC00885F41 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2F30690127F94BA700885F41 /* itemData.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		2F30691127F97F7A00885F41 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2F30691327F97F9800885F41 /* Dropdown.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2F8A69E227FAC50800FE4293 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2F8A69E327FAC52E00FE4293 /* CashlessPaymentChannelList.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7898A9BB6BE4C81AD3D2519D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAC9C5BA11D385B05650975D /* Pods_Kasir.framework */,
+				41239A211839C718ED2CFC35 /* Pods_Kasir_KasirUITests.framework */,
+				ABF3EA259579C8934E5BF3DF /* Pods_KasirTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84B5F57A7D119BB5E776E7CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BBF98C8EF1F01990718BFA4A /* Pods-Kasir.debug.xcconfig */,
+				D8188612AAB2B218FB8E4BF9 /* Pods-Kasir.release.xcconfig */,
+				9D18CF06A09A336EA70ACE92 /* Pods-Kasir-KasirUITests.debug.xcconfig */,
+				20B01A39789A36F678AB5E4E /* Pods-Kasir-KasirUITests.release.xcconfig */,
+				8CF15A777F88294CA0970BE2 /* Pods-KasirTests.debug.xcconfig */,
+				95A7F21DFCE00E77CC8131E1 /* Pods-KasirTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F20AC0627F7480D0065031F /* Kasir */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F20AC2B27F7480E0065031F /* Build configuration list for PBXNativeTarget "Kasir" */;
+			buildPhases = (
+				59C0D56C3AEA9EF361C4B106 /* [CP] Check Pods Manifest.lock */,
+				2F20AC0327F7480D0065031F /* Sources */,
+				2F20AC0427F7480D0065031F /* Frameworks */,
+				2F20AC0527F7480D0065031F /* Resources */,
+				09FFE1715FFA576F00AE70EB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kasir;
+			productName = Kasir;
+			productReference = 2F20AC0727F7480D0065031F /* Kasir.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2F20AC1627F7480E0065031F /* KasirTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F20AC2E27F7480E0065031F /* Build configuration list for PBXNativeTarget "KasirTests" */;
+			buildPhases = (
+				C955A2CF9B2FC2D49667E5C6 /* [CP] Check Pods Manifest.lock */,
+				2F20AC1327F7480E0065031F /* Sources */,
+				2F20AC1427F7480E0065031F /* Frameworks */,
+				2F20AC1527F7480E0065031F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F20AC1927F7480E0065031F /* PBXTargetDependency */,
+			);
+			name = KasirTests;
+			productName = KasirTests;
+			productReference = 2F20AC1727F7480E0065031F /* KasirTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2F20AC2027F7480E0065031F /* KasirUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F20AC3127F7480E0065031F /* Build configuration list for PBXNativeTarget "KasirUITests" */;
+			buildPhases = (
+				A6E056D7CF22FD30D22DE672 /* [CP] Check Pods Manifest.lock */,
+				2F20AC1D27F7480E0065031F /* Sources */,
+				2F20AC1E27F7480E0065031F /* Frameworks */,
+				2F20AC1F27F7480E0065031F /* Resources */,
+				054677CC2B810AB121699A86 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F20AC2327F7480E0065031F /* PBXTargetDependency */,
+			);
+			name = KasirUITests;
+			productName = KasirUITests;
+			productReference = 2F20AC2127F7480E0065031F /* KasirUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F20ABFF27F7480D0065031F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					2F20AC0627F7480D0065031F = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					2F20AC1627F7480E0065031F = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 2F20AC0627F7480D0065031F;
+					};
+					2F20AC2027F7480E0065031F = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 2F20AC0627F7480D0065031F;
+					};
+				};
+			};
+			buildConfigurationList = 2F20AC0227F7480D0065031F /* Build configuration list for PBXProject "Kasir" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F20ABFE27F7480D0065031F;
+			productRefGroup = 2F20AC0827F7480D0065031F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F20AC0627F7480D0065031F /* Kasir */,
+				2F20AC1627F7480E0065031F /* KasirTests */,
+				2F20AC2027F7480E0065031F /* KasirUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F20AC0527F7480D0065031F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F30690227F94BA700885F41 /* itemData.json in Resources */,
+				2F20AC1227F7480E0065031F /* Preview Assets.xcassets in Resources */,
+				2F20AC0F27F7480E0065031F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F20AC1527F7480E0065031F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F20AC1F27F7480E0065031F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		054677CC2B810AB121699A86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kasir-KasirUITests/Pods-Kasir-KasirUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kasir-KasirUITests/Pods-Kasir-KasirUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kasir-KasirUITests/Pods-Kasir-KasirUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		09FFE1715FFA576F00AE70EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kasir/Pods-Kasir-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kasir/Pods-Kasir-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kasir/Pods-Kasir-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59C0D56C3AEA9EF361C4B106 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kasir-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6E056D7CF22FD30D22DE672 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kasir-KasirUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C955A2CF9B2FC2D49667E5C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KasirTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F20AC0327F7480D0065031F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F30690027F94B9D00885F41 /* HistoryView.swift in Sources */,
+				2F30690A27F96C3F00885F41 /* TransactionItem.swift in Sources */,
+				2F20AC0D27F7480D0065031F /* ContentView.swift in Sources */,
+				2F30691427F97F9800885F41 /* Dropdown.swift in Sources */,
+				2F8A69E627FAC55D00FE4293 /* CashlessPaymentChannel.swift in Sources */,
+				2F8A69E427FAC52E00FE4293 /* CashlessPaymentChannelList.swift in Sources */,
+				2F3068F827F94B9400885F41 /* Item.swift in Sources */,
+				2F30690C27F96C8F00885F41 /* Transaction.swift in Sources */,
+				2F30690427F94BE300885F41 /* ItemDBManager.swift in Sources */,
+				2F3068FF27F94B9D00885F41 /* CashierView.swift in Sources */,
+				2F30691027F96FBE00885F41 /* TransactionItemDBManager.swift in Sources */,
+				2F20AC0B27F7480D0065031F /* KasirApp.swift in Sources */,
+				2F3068FE27F94B9D00885F41 /* Codable.swift in Sources */,
+				2F3068FD27F94B9D00885F41 /* InventoryView.swift in Sources */,
+				2F8A69E127FAC45A00FE4293 /* PaymentMethodView.swift in Sources */,
+				2F30690E27F96DF600885F41 /* TransactionDBManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F20AC1327F7480E0065031F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F20AC1C27F7480E0065031F /* KasirTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F20AC1D27F7480E0065031F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F20AC2627F7480E0065031F /* KasirUITests.swift in Sources */,
+				2F20AC2827F7480E0065031F /* KasirUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F20AC1927F7480E0065031F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F20AC0627F7480D0065031F /* Kasir */;
+			targetProxy = 2F20AC1827F7480E0065031F /* PBXContainerItemProxy */;
+		};
+		2F20AC2327F7480E0065031F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F20AC0627F7480D0065031F /* Kasir */;
+			targetProxy = 2F20AC2227F7480E0065031F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2F20AC2927F7480E0065031F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2F20AC2A27F7480E0065031F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2F20AC2C27F7480E0065031F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBF98C8EF1F01990718BFA4A /* Pods-Kasir.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Kasir/Preview Content\"";
+				DEVELOPMENT_TEAM = KZ9PN4535G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renaka.movie.Kasir;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2F20AC2D27F7480E0065031F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8188612AAB2B218FB8E4BF9 /* Pods-Kasir.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Kasir/Preview Content\"";
+				DEVELOPMENT_TEAM = KZ9PN4535G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renaka.movie.Kasir;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2F20AC2F27F7480E0065031F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CF15A777F88294CA0970BE2 /* Pods-KasirTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renaka.movie.KasirTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kasir.app/Kasir";
+			};
+			name = Debug;
+		};
+		2F20AC3027F7480E0065031F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95A7F21DFCE00E77CC8131E1 /* Pods-KasirTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renaka.movie.KasirTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kasir.app/Kasir";
+			};
+			name = Release;
+		};
+		2F20AC3227F7480E0065031F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D18CF06A09A336EA70ACE92 /* Pods-Kasir-KasirUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renaka.movie.KasirUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kasir;
+			};
+			name = Debug;
+		};
+		2F20AC3327F7480E0065031F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20B01A39789A36F678AB5E4E /* Pods-Kasir-KasirUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renaka.movie.KasirUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kasir;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F20AC0227F7480D0065031F /* Build configuration list for PBXProject "Kasir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F20AC2927F7480E0065031F /* Debug */,
+				2F20AC2A27F7480E0065031F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F20AC2B27F7480E0065031F /* Build configuration list for PBXNativeTarget "Kasir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F20AC2C27F7480E0065031F /* Debug */,
+				2F20AC2D27F7480E0065031F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F20AC2E27F7480E0065031F /* Build configuration list for PBXNativeTarget "KasirTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F20AC2F27F7480E0065031F /* Debug */,
+				2F20AC3027F7480E0065031F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F20AC3127F7480E0065031F /* Build configuration list for PBXNativeTarget "KasirUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F20AC3227F7480E0065031F /* Debug */,
+				2F20AC3327F7480E0065031F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2F20ABFF27F7480D0065031F /* Project object */;
+}

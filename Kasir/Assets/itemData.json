@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Shampoo Head and Shoulders",
+    "quantity": 10,
+    "category": "Shampoo",
+    "price": 10000,
+    "id": 1,
+  },
+  
+  {
+    "name": "Shampoo Pantene",
+    "quantity": 10,
+    "category": "Shampoo",
+    "price": 8000,
+    "id": 2,
+  },
+  {
+    "name": "Shampoo Lifebouy",
+    "quantity": 10,
+    "category": "Shampoo",
+    "price": 8000,
+    "id": 3,
+  },
+  {
+    "name": "Shampoo Sunsilk",
+    "quantity": 10,
+    "category": "Shampoo",
+    "price": 9000,
+    "id": 4,
+  },
+  {
+    "name": "Shampoo Tresemme",
+    "quantity": 10,
+    "category": "Shampoo",
+    "price": 14000,
+    "id": 5,
+  },
+]
