@@ -34,6 +34,7 @@ struct InventoryView: View {
             })
             VStack () {
                 Text("Form Input barang")
+                    .font(Font.headline.weight(.bold))
                 TextField("Nama barang", text: $itemName).padding().textFieldStyle(.roundedBorder)
                 TextField("Kategory barang", text: $itemCategory).padding().textFieldStyle(.roundedBorder)
                 TextField("Harga barang", text: $itemPrice).padding().textFieldStyle(.roundedBorder)

@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct CashlessPaymentChannel {
+struct CashlessPaymentChannel: Codable, Hashable, Identifiable {
+    public var id: Int = 0
     public var name: String = ""
     public var image: String = ""
 }

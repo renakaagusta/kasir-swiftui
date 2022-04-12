@@ -140,6 +140,8 @@ class ItemDBManager {
             db = nil
             try fm.removeItem(atPath: "\(path)/cashier.sqlite3")
             UserDefaults.standard.set(false, forKey: "is_item_table_created")
+            UserDefaults.standard.set(false, forKey: "is_transaction_table_created")
+            UserDefaults.standard.set(false, forKey: "is_transaction_item_table_created")
         } catch {
             print(error)
         }

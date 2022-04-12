@@ -5,29 +5,32 @@ extension Color {
 }
 
 struct ContentView: View {
+    
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.white
+        UITableView.appearance().backgroundColor = .clear
+    }
+    
     var body: some View {
-        VStack(alignment: .center) {
-            HStack() {
-                Spacer()
-                Text("Kasir").foregroundColor(.blue)
-                Spacer()
+            VStack(alignment: .center) {
+                TabView() {
+                    HistoryView()
+                     .tabItem {
+                         Image(systemName: "timer")
+                         Text("Riwayat")
+                     }.tag(1)
+                    CashierView().tabItem {
+                        Image(systemName: "dollarsign.square")
+                        Text("Kasir")
+                     }.tag(1)
+                    InventoryView().tabItem {
+                       Image(systemName: "list.bullet")
+                       Text("Inventori")
+                    }.tag(1).background(.white).padding()
+                }.background(.white)
+            }.onAppear{
+                //ItemDBManager().deleteDatabase()
             }
-            TabView() {
-                HistoryView()
-                 .tabItem {
-                     Image(systemName: "timelapse")
-                     Text("Riwayat")
-                 }.tag(1)
-                 CashierView().tabItem {
-                    Image(systemName: "dollarsign.square")
-                    Text("Kasir")
-                 }.tag(1)
-                InventoryView().tabItem {
-                   Image(systemName: "list.bullet")
-                   Text("Inventori")
-                }.tag(1).background(.white).padding()
-            }
-        }
     }
 }
 
@@ -35,5 +38,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .previewDevice("iPad Pro (11-inch) (3rd generation)")
+.previewInterfaceOrientation(.landscapeLeft)
     }
 }

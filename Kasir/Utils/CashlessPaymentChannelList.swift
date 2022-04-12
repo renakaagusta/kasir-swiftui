@@ -9,14 +9,21 @@ import Foundation
 
 let cashlessPaymentChannelList: [CashlessPaymentChannel] = [
     CashlessPaymentChannel(
+        id: 0,
         name: "OVO",
-        image: ""
+        image: "ovo"
     ),
     CashlessPaymentChannel(
+        id: 1,
         name: "GOPAY",
-        image: ""
+        image: "gopay"
     ),CashlessPaymentChannel(
+        id: 2,
         name: "ShopeePay",
-        image: ""
+        image: "shopeepay"
+    ),CashlessPaymentChannel(
+        id: 3,
+        name: "Link aja",
+        image: "linkaja"
     )
 ]

@@ -15,7 +15,7 @@ class TransactionDBManager {
     private var date: Expression<Date>!
     private var totalPrice: Expression<Int>!
     private var paymentMethod: Expression<String>!
-    private var cashlessCannel: Expression<String>!
+    private var cashlessCannel: Expression<Int>!
      
     init () {
         do {
@@ -27,7 +27,7 @@ class TransactionDBManager {
             date = Expression<Date>("date")
             totalPrice = Expression<Int>("totalPrice")
             paymentMethod = Expression<String>("paymentMethod")
-            cashlessCannel = Expression<String>("cashlessCannel")
+            cashlessCannel = Expression<Int>("cashlessCannel")
 
             if (!UserDefaults.standard.bool(forKey: "is_transaction_table_created")) {
                 do {
@@ -35,7 +35,7 @@ class TransactionDBManager {
                         t.column(id, primaryKey: true)
                         t.column(date)
                         t.column(totalPrice)
-                        t.column(paymentMethod, unique: true)
+                        t.column(paymentMethod)
                         t.column(cashlessCannel)
                     })
                 } catch let error {
@@ -50,11 +50,15 @@ class TransactionDBManager {
         }
     }
     
-    public func addTransaction(dateValue: Date, totalPriceValue: Int, paymentMethodValue: String, cashlessCannelValue: String) {
+    public func addTransaction(dateValue: Date, totalPriceValue: Int, paymentMethodValue: String, cashlessCannelValue: Int) -> Int {
         do {
+            print("cashless cannel")
+            print(cashlessCannelValue)
             try db?.run(transactions.insert(date <- dateValue, totalPrice <- totalPriceValue, paymentMethod <- paymentMethodValue, cashlessCannel <- cashlessCannelValue))
+            return Int(db?.lastInsertRowid ?? 0)
         } catch {
             print(error)
+            return 0
         }
     }
     
@@ -73,7 +77,7 @@ class TransactionDBManager {
                     transactionModel.date = transaction[date]
                     transactionModel.totalPrice = transaction[totalPrice]
                     transactionModel.paymentMethod = transaction[paymentMethod]
-                    transactionModel.cashlessChannel = transaction[cashlessCannel]
+                    transactionModel.cashlessChannel = 0
          
                     transactionModels.append(transactionModel)
                 }
@@ -107,7 +111,7 @@ class TransactionDBManager {
         return transactionModel
     }
     
-    public func updateTransaction(idValue: Int, totalPriceValue: Int, paymentMethodValue: String, cashlessCannelValue: String) {
+    public func updateTransaction(idValue: Int, totalPriceValue: Int, paymentMethodValue: String, cashlessCannelValue: Int) {
         do {
             let transaction: Table = transactions.filter(id == idValue)
             

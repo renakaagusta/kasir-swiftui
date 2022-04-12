@@ -26,9 +26,11 @@
 		2F30690E27F96DF600885F41 /* TransactionDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30690D27F96DF600885F41 /* TransactionDBManager.swift */; };
 		2F30691027F96FBE00885F41 /* TransactionItemDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30690F27F96FBE00885F41 /* TransactionItemDBManager.swift */; };
 		2F30691427F97F9800885F41 /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30691327F97F9800885F41 /* Dropdown.swift */; };
+		2F7A90C427FE518E00301DBA /* TransactionSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A90C327FE518E00301DBA /* TransactionSuccessView.swift */; };
 		2F8A69E127FAC45A00FE4293 /* PaymentMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A69E027FAC45A00FE4293 /* PaymentMethodView.swift */; };
 		2F8A69E427FAC52E00FE4293 /* CashlessPaymentChannelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A69E327FAC52E00FE4293 /* CashlessPaymentChannelList.swift */; };
 		2F8A69E627FAC55D00FE4293 /* CashlessPaymentChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A69E527FAC55D00FE4293 /* CashlessPaymentChannel.swift */; };
+		2F9C280F27FED50600240B45 /* CarBode in Frameworks */ = {isa = PBXBuildFile; productRef = 2F9C280E27FED50600240B45 /* CarBode */; };
 		3C960ABF1592133C373DB87C /* Pods_KasirTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF3EA259579C8934E5BF3DF /* Pods_KasirTests.framework */; };
 		4864E47400E00D2FACFBB110 /* Pods_Kasir_KasirUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41239A211839C718ED2CFC35 /* Pods_Kasir_KasirUITests.framework */; };
 		C9517A5427879270D8D52ACD /* Pods_Kasir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC9C5BA11D385B05650975D /* Pods_Kasir.framework */; };
@@ -75,6 +77,7 @@
 		2F30690D27F96DF600885F41 /* TransactionDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDBManager.swift; sourceTree = "<group>"; };
 		2F30690F27F96FBE00885F41 /* TransactionItemDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemDBManager.swift; sourceTree = "<group>"; };
 		2F30691327F97F9800885F41 /* Dropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
+		2F7A90C327FE518E00301DBA /* TransactionSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSuccessView.swift; sourceTree = "<group>"; };
 		2F8A69E027FAC45A00FE4293 /* PaymentMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodView.swift; sourceTree = "<group>"; };
 		2F8A69E327FAC52E00FE4293 /* CashlessPaymentChannelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashlessPaymentChannelList.swift; sourceTree = "<group>"; };
 		2F8A69E527FAC55D00FE4293 /* CashlessPaymentChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashlessPaymentChannel.swift; sourceTree = "<group>"; };
@@ -94,6 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9517A5427879270D8D52ACD /* Pods_Kasir.framework in Frameworks */,
+				2F9C280F27FED50600240B45 /* CarBode in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +188,7 @@
 				2F3068FB27F94B9D00885F41 /* CashierView.swift */,
 				2F8A69E027FAC45A00FE4293 /* PaymentMethodView.swift */,
 				2F20AC0C27F7480D0065031F /* ContentView.swift */,
+				2F7A90C327FE518E00301DBA /* TransactionSuccessView.swift */,
 				2F3068F927F94B9D00885F41 /* InventoryView.swift */,
 				2F3068FC27F94B9D00885F41 /* HistoryView.swift */,
 				2F20AC0A27F7480D0065031F /* KasirApp.swift */,
@@ -278,6 +283,9 @@
 			dependencies = (
 			);
 			name = Kasir;
+			packageProductDependencies = (
+				2F9C280E27FED50600240B45 /* CarBode */,
+			);
 			productName = Kasir;
 			productReference = 2F20AC0727F7480D0065031F /* Kasir.app */;
 			productType = "com.apple.product-type.application";
@@ -353,6 +361,9 @@
 				Base,
 			);
 			mainGroup = 2F20ABFE27F7480D0065031F;
+			packageReferences = (
+				2F9C280D27FED50600240B45 /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */,
+			);
 			productRefGroup = 2F20AC0827F7480D0065031F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -505,6 +516,7 @@
 				2F30691427F97F9800885F41 /* Dropdown.swift in Sources */,
 				2F8A69E627FAC55D00FE4293 /* CashlessPaymentChannel.swift in Sources */,
 				2F8A69E427FAC52E00FE4293 /* CashlessPaymentChannelList.swift in Sources */,
+				2F7A90C427FE518E00301DBA /* TransactionSuccessView.swift in Sources */,
 				2F3068F827F94B9400885F41 /* Item.swift in Sources */,
 				2F30690C27F96C8F00885F41 /* Transaction.swift in Sources */,
 				2F30690427F94BE300885F41 /* ItemDBManager.swift in Sources */,
@@ -679,6 +691,7 @@
 				DEVELOPMENT_TEAM = KZ9PN4535G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) use camera for scanning barcode";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -709,6 +722,7 @@
 				DEVELOPMENT_TEAM = KZ9PN4535G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) use camera for scanning barcode";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -736,7 +750,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.renaka.movie.KasirTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -756,7 +770,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.renaka.movie.KasirTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -843,6 +857,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2F9C280D27FED50600240B45 /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/heart/CarBode-Barcode-Scanner-For-SwiftUI";
+			requirement = {
+				branch = 2.1.2;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F9C280E27FED50600240B45 /* CarBode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F9C280D27FED50600240B45 /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */;
+			productName = CarBode;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F20ABFF27F7480D0065031F /* Project object */;
 }

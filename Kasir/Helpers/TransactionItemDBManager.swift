@@ -32,7 +32,7 @@ class TransactionItemDBManager {
                     try db?.run(transactionItems.create { (t) in
                         t.column(id, primaryKey: true)
                         t.column(transactionId)
-                        t.column(itemId, unique: true)
+                        t.column(itemId)
                         t.column(quantity)
                     })
                 } catch let error {
@@ -63,6 +63,32 @@ class TransactionItemDBManager {
         do {
             if(db != nil) {
                 for transactionItem in try db!.prepare(transactionItems) {
+         
+                    var transactionItemModel: TransactionItem = TransactionItem()
+         
+                    transactionItemModel.id = transactionItem[id]
+                    transactionItemModel.transactionId = transactionItem[transactionId]
+                    transactionItemModel.itemId = transactionItem[itemId]
+                    transactionItemModel.quantity = transactionItem[quantity]
+         
+                    transactionItemModels.append(transactionItemModel)
+                }
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        return transactionItemModels
+    }
+    
+    public func getTransactionItemsByTransaction(transactionIdValue: Int) -> [TransactionItem] {
+        var transactionItemModels: [TransactionItem] = []
+     
+        transactionItems = transactionItems.order(id.desc)
+     
+        do {
+            if(db != nil) {
+                for transactionItem in try db!.prepare(transactionItems.filter(transactionId == transactionIdValue)) {
          
                     var transactionItemModel: TransactionItem = TransactionItem()
          
