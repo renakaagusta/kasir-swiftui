@@ -1,3 +1,10 @@
+//
+//  InventoryView.swift
+//  Kasir
+//
+//  Created by renaka agusta on 03/04/22.
+//
+
 import SwiftUI
 import CarBode
 import AVFoundation
@@ -11,7 +18,7 @@ struct CashierView: View {
     @State var transaction: Transaction = Transaction()
     @State var transactionItemList: [TransactionItem] = []
     @State var itemList: [Item] = []
-    @State var selectedItem = 0
+    @State var selectedItem = -1
     
     func selectItem(selectedItemId: Int) {
         item = ItemDBManager().getItem(idValue: selectedItemId)
@@ -19,7 +26,6 @@ struct CashierView: View {
         if let index = transactionItemList.firstIndex(where: {$0.itemId == selectedItem}) {
             quantity = String(transactionItemList[index].quantity)
         }
-        print(item.id)
     }
 
     var body: some View {
@@ -31,17 +37,28 @@ struct CashierView: View {
                     CBScanner(
                         supportBarcode: .constant([.qr, .code128]),
                         scanInterval: .constant(1.0)){
-                            print("BarCodeType =",$0.type.rawValue, "Value =",$0.value)
-                            let randomItemIndex = Int.random(in: 0..<itemList.count)
-                            selectItem(selectedItemId: self.itemList[randomItemIndex].id)
-                            if(transactionItemList.first(where: {$0.id == self.itemList[randomItemIndex].id}) == nil) {
-                                var newTransactionItem = TransactionItem()
-                                newTransactionItem.quantity = 0
-                                newTransactionItem.itemId = selectedItem
-                                newTransactionItem.id = Int.random(in: 0..<1200)
-                                transactionItemList.append(newTransactionItem)
-                                transaction.totalPrice += newTransactionItem.quantity * item.price
-                                quantity = "0"
+                            print("QRValue =",$0.value)
+                            let randomItemIndex = Int($0.value)
+                            if(randomItemIndex != nil) {
+                                let findItem: Item? = self.itemList.first(where: {$0.id == randomItemIndex})
+                                if(findItem == nil) {
+                                    print("Ooops QR tidak ditemukan")
+                                    return
+                                } else {
+                                    selectItem(selectedItemId:findItem!.id)
+                                    if(transactionItemList.first(where: {$0.id == findItem!.id}) == nil) {
+                                        var newTransactionItem = TransactionItem()
+                                        newTransactionItem.quantity = 0
+                                        newTransactionItem.itemId = selectedItem
+                                        newTransactionItem.id = Int.random(in: 0..<1200)
+                                        transactionItemList.append(newTransactionItem)
+                                        transaction.totalPrice += newTransactionItem.quantity * item.price
+                                        quantity = "0"
+                                    }
+                                }
+                            } else {
+                                print("Ooops QR tidak valid")
+                                return
                             }
                     }
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 120, maxHeight: 150)
@@ -64,8 +81,8 @@ struct CashierView: View {
                         transaction.totalPrice -=  item.price
                     }, label: {
                         Text("-").foregroundColor(Color.white).padding()
-                    }).frame(width: 60, height: 50).background(Color.blue).cornerRadius(10)
-                    TextField("Jumlah barang", text: $quantity).padding().textFieldStyle(.roundedBorder).frame(width: 200, height: 80)
+                    }).frame(width: 60, height: 50).background(selectedItem != -1 ? Color.blue : Color.gray).cornerRadius(10)
+                    TextField("Jumlah barang", text: $quantity).disabled(true).padding().textFieldStyle(.roundedBorder).frame(width: 200, height: 80)
                     Button(action: {
                             var addQuantity = Int(quantity) ?? 0
                             addQuantity+=1
@@ -79,8 +96,8 @@ struct CashierView: View {
                             Text("+")
                                 .foregroundColor(Color.white)
                                 .padding()
-                        }).frame(width: 60, height: 50)
-                        .background(Color.blue).cornerRadius(10).frame(width: 80, height: 30)
+                        }).disabled(selectedItem == -1).frame(width: 60, height: 50)
+                        .background(selectedItem != -1 ? Color.blue : Color.gray).cornerRadius(10).frame(width: 80, height: 30)
                     Spacer()
                 }
                 HStack{
@@ -93,8 +110,7 @@ struct CashierView: View {
                                 Text("1")
                                     .foregroundColor(Color.white).frame(width: 140, height: 30)
                                     .padding()
-                            })
-                                .background(Color.blue)
+                            }).disabled(selectedItem == -1).background(selectedItem != -1 ? Color.blue : Color.gray)
                                 .cornerRadius(10)
                             Spacer()
                             Button(action: {
@@ -103,13 +119,12 @@ struct CashierView: View {
                                 Text("2")
                                     .foregroundColor(Color.white).frame(width: 140, height: 30)
                                     .padding()
-                            })
-                                .background(Color.blue).cornerRadius(10)
+                            }).disabled(selectedItem == -1).background(selectedItem != -1 ? Color.blue : Color.gray).cornerRadius(10)
                                 Spacer()
                             Button(action: {
                                 quantity += "3"}, label: {
                                 Text("3").foregroundColor(Color.white).frame(width: 140, height: 30).padding()
-                            }).background(Color.blue).cornerRadius(10)
+                            }).disabled(selectedItem == -1).background(selectedItem != -1 ? Color.blue : Color.gray).cornerRadius(10)
                             }.frame(width: 200)
                         HStack(){
                             Button(action: {
@@ -118,21 +133,19 @@ struct CashierView: View {
                                 Text("4")
                                     .foregroundColor(Color.white).frame(width: 140, height: 30)
                                     .padding()
-                            })
-                                .background(Color.blue).cornerRadius(10)
+                            }).disabled(selectedItem == -1).background(selectedItem != -1 ? Color.blue : Color.gray).cornerRadius(10)
                             Spacer()
                             Button(action: {
                                 quantity += "5"
                             }, label: {
                                 Text("5").foregroundColor(Color.white).frame(width: 140, height: 30)
                                     .padding()
-                            })
-                                .background(Color.blue).cornerRadius(10)
+                            }).disabled(selectedItem == -1).background(selectedItem != -1 ? Color.blue : Color.gray).cornerRadius(10)
                             Spacer()
                             Button(action: {
                                 quantity += "6"}, label: {
                                 Text("6").foregroundColor(Color.white).frame(width: 140, height: 30).padding()
-                            }).background(Color.blue).cornerRadius(10)
+                            }).disabled(selectedItem == -1).background(selectedItem != -1 ? Color.blue : Color.gray).cornerRadius(10)
                         }.frame(width: 200)
                         HStack(){
                             Button(action: {
@@ -141,8 +154,7 @@ struct CashierView: View {
                                 Text("7")
                                     .foregroundColor(Color.white).frame(width: 140, height: 30)
                                     .padding()
-                            })
-                                .background(Color.blue).cornerRadius(10)
+                            }).disabled(selectedItem == -1).background(selectedItem != -1 ? Color.blue : Color.gray).cornerRadius(10)
                             Spacer()
                             Button(action: {
                                 quantity += "8"
@@ -150,21 +162,19 @@ struct CashierView: View {
                                 Text("8")
                                     .foregroundColor(Color.white).frame(width: 140, height: 30)
                                     .padding()
-                            })
-                                .background(Color.blue).cornerRadius(10)
+                            }).disabled(selectedItem == -1).background(selectedItem != -1 ? Color.blue : Color.gray).cornerRadius(10)
                             Spacer()
                             Button(action: {
                                 quantity += "9"}, label: {
                                     Text("9").foregroundColor(Color.white).frame(width: 140, height: 30).padding()
-                            }).background(Color.blue).cornerRadius(10)}.frame(width: 200)
+                            }).disabled(selectedItem == -1).background(selectedItem != -1 ? Color.blue : Color.gray).cornerRadius(10)}.frame(width: 200)
                         HStack(){
                             Button(action: {
                             }, label: {
                                 Text("")
                                     .foregroundColor(Color.white).frame(width: 140, height: 30)
                                     .padding()
-                            })
-                                .background(Color.white).cornerRadius(10)
+                            }).disabled(selectedItem == -1).cornerRadius(10)
                             Spacer()
                             Button(action: {
                                 quantity += "0"
@@ -172,13 +182,12 @@ struct CashierView: View {
                                 Text("0")
                                     .foregroundColor(Color.white).frame(width: 140, height: 30)
                                     .padding()
-                            })
-                                .background(Color.blue).cornerRadius(10)
+                            }).disabled(selectedItem == -1).background(selectedItem != -1 ? Color.blue : Color.gray).cornerRadius(10)
                             Spacer()
                             Button(action: {
-                                quantity += "0"}, label: {
+                                quantity.dropLast()}, label: {
                                     Image(systemName: "delete.left").foregroundColor(.white).frame(width: 140, height: 30).padding()
-                            }).background(Color.blue).cornerRadius(10)}.frame(width: 200)
+                            }).disabled(selectedItem == -1).background(selectedItem != -1 ? Color.blue : Color.gray).cornerRadius(10)}.frame(width: 200)
                             }
                     Spacer()
                 }
@@ -206,15 +215,14 @@ struct CashierView: View {
                     Text("Rp " + String(transaction.totalPrice))
                     NavigationLink(destination: PaymentMethodView(transaction: self.transaction, transactionItemList: self.transactionItemList)) {
                         Text("Bayar").foregroundColor(.white)
-                    }.padding()
-                        .background(Color.blue).cornerRadius(10)
+                    }.disabled(transactionItemList.count == 0).padding()
+                        .background(transactionItemList.count == 0 ? Color.gray :Color.blue).cornerRadius(10)
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 100, alignment: .topLeading).padding().padding().overlay(Rectangle().frame(width: nil, height: 1, alignment: .top).foregroundColor(Color.gray), alignment: .top)
             }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity).background(Color.white).overlay(Rectangle().frame(width: 1, height: nil, alignment: .top).foregroundColor(Color.gray), alignment: .leading)
         }.onAppear{
             let items = ItemDBManager().getItems()
             
             itemList = items
-            selectItem(selectedItemId: items[items.count - 1].id)
         }
     }
 }

@@ -10,6 +10,11 @@ struct HistoryView: View {
     
     var body: some View {
         VStack {
+            if(transactionModels.count == 0) {
+                Image(systemName: "exclamationmark.circle").resizable()
+                            .frame(width: 50, height: 50).foregroundColor(.blue)
+                            Text("Riwayat transaksi tidak ditemukan")
+            } else {
             HStack {
                 VStack (){
                     Text("Riwayat Transaksi").font(Font.headline.weight(.bold))
@@ -23,11 +28,9 @@ struct HistoryView: View {
                             Spacer()
                               Text("Total: Rp. "+String(transaction.totalPrice)).foregroundColor(Color.black)
                         }
-                      }.foregroundColor(self.transaction != nil ? (self.transaction!.id == transaction.id ? .white : .blue) : .blue).background(self.transaction != nil ? (self.transaction!.id == transaction.id ? .blue : .white) : .white)
+                      }.foregroundColor(self.transaction != nil ? (self.transaction!.id == transaction.id ? .white : .lightGray) : .lightGray).background(self.transaction != nil ? (self.transaction!.id == transaction.id ? Color.lightGray : .white) : .white)
                     }
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading).background(.white).onAppear{
-                    self.transactionModels = TransactionDBManager().getTransactions()
-                    print(transactionModels)
                 }
                 VStack {
                     if(transaction != nil) {
@@ -61,11 +64,14 @@ struct HistoryView: View {
                     }
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading).background(.white).padding()
             }
+        }
         }.onAppear{
             let items = ItemDBManager().getItems()
             
             itemList = items
             self.dateFormatterPrint.dateFormat = "hh:mm, d MMMM yyyy"
+            
+            self.transactionModels = TransactionDBManager().getTransactions()
         }
     }
 }
